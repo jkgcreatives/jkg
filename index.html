@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>JKG Web Development</title>
+
+  <!-- Custom fonts for this theme -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+
+  <!-- Theme CSS -->
+  <link href="css/freelancer.min.css" rel="stylesheet">
+  <style type="text/css">
+    .portfolio .portfolio-item .portfolio-item-caption {
+      opacity: 1;
+      background-color: rgba(239, 187, 34, 0.5) !important;
+    }
+    .portfolio .portfolio-item .portfolio-item-caption:hover {
+    opacity: 0;
+    }
+    .masthead {
+      padding-top: 6rem;
+      height: 100vh;
+    }
+    .masthead .masthead-avatar {
+      width: 20rem;
+    }
+    .bg-first {
+      background: #d8a409!important;
+    }
+    .bg-gradient-first {
+
+    }
+    .text-first {
+      color: #efbb22 !important;
+    }
+
+    .text-second {
+      color: #9b4ac9 !important;
+    }
+    .bg-second {
+      background: #9b4ac9 !important;
+    }
+    .text-third {
+      color: #f16727 !important;
+    }
+    .bg-third {
+      background: #f16727!important;
+    }
+    .bg-dark {
+      background-color: #2f2f2f !important;
+    }
+    .bg-transparent {
+      background: rgba(0,0,0,0);
+    }
+    .bg-dark-gradient {
+      
+    }
+    #grunge {
+      background: url('img/bg.jpg');
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+    #gradient {
+      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#45484d+0,000000+100;Black+3D+%231 */
+      background: #45484d; /* Old browsers */
+      background: -moz-radial-gradient(top, #45484d 0%, #000000 100%); /* FF3.6-15 */
+      background: -webkit-radial-gradient(top, #45484d 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+      background: radial-gradient(to bottom, #45484d 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+      position: absolute;
+       top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 2;
+      opacity: 0.8;
+    }
+
+    #about,
+    #contact,
+    #portfolio {
+      position: relative;
+      z-index: 1;
+    }
+
+
+    #about,
+    #contact {
+      height: 100vh;
+    }
+
+    #portfolio {
+     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#efbb22+0,000000+100 */
+background: #d8a409
+    }
+    #about {
+      background: #9b4ac9;
+    }
+    #contact {
+      background: #f16727;
+    }
+
+    .bg-dark,
+    .bg-transparent {
+      transition: background 0.5s !important;
+    }
+
+    #mainNav .navbar-nav > li.nav-item:nth-child(1) > a.nav-link.active {
+      background: #efbb22 !important;
+      color: white !important;
+    }
+    #mainNav .navbar-nav > li.nav-item:nth-child(2) > a.nav-link.active {
+      background:  #9b4ac9!important;
+      color: white !important;
+    }
+    #mainNav .navbar-nav > li.nav-item:nth-child(3) > a.nav-link.active {
+      background:#f16727!important;
+      color: white !important;
+    }
+    .copyright {
+      background: black !important;
+    }
+    #contactTable td{
+      border: 1px solid transparent;
+    }
+    #port .card {
+      cursor: pointer;
+    }
+    .hoveredCard {
+      color: #48380b !important;
+      transition: color 0.3s;
+    }
+    .portfolio-modal .close {
+    font-size: 3rem;
+    line-height: 3rem;
+    color: #efbb22;
+}
+
+
+
+.arrow {
+      box-sizing: border-box;
+      height: 1vw;
+      width: 1vw;
+      border-style: solid;
+      border-color: white;
+      border-width: 0px 1.5px 1.5px 0px;
+      transform: rotate(45deg);
+    }
+
+    .first {
+      animation: first 0.8s infinite;
+    }
+
+    .second {
+      animation: first 0.9s infinite;
+    }
+
+    .third {
+      animation: first 1s infinite;
+    }
+
+    @keyframes first {
+      to {
+        border-color: #efbb22;
+      }
+    }
+    @keyframes second {
+      to {
+        border-color: #9b4ac9;
+      }
+    }
+    @keyframes third {
+      to {
+        border-color: #f16727;
+      }
+    }
+
+    #scrollDown {
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg bg-transparent text-uppercase fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">
+        <img src="img/JKG6.png" class="img-fluid" style="width: 50px;height:50px;display: none;-webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);;" id="navLogo">
+      </a>
+      <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-first" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-second" href="#about">About</a>
+          </li>
+          <li class="nav-item mx-0 mx-lg-1">
+            <a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger text-third" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+
+
+    </div>
+  </nav>
+
+   <div id="gradient"></div>
+   <div id="grunge"></div>
+
+  <!-- Masthead -->
+  <header class="masthead bg-dark-gradient text-white text-center mt-0" style="position: relative;z-index: 3">
+    <div class="container d-flex align-items-center flex-column" >
+
+     
+
+      <!-- Masthead Avatar Image -->
+      <img class="masthead-avatar mb-0" src="img/JKG6.png" alt="">
+
+      <!-- Masthead Heading -->
+      <h3 class="display-5 text-uppercase mb-0"><span class="text-first">#WEDESIGN</span><span class="text-second">#WECREATE</span></h3>
+
+      <!-- Masthead Subheading -->
+      <h6 class=" font-weight-light mb-0">Web Design and Development</h6>
+
+      <div class="mt-5">
+        
+        <a class="js-scroll-trigger" id="scrollDown" href="#portfolio">
+          <div class="arrow first"></div>
+          <div class="arrow second"></div>
+          <div class="arrow third"></div>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <div data-spy="scroll" data-target="#mainNav">
+    <!-- Portfolio Section -->
+    <section class="page-section portfolio" id="portfolio" >
+      <div class="container" style="opacity: 0;">
+
+        <!-- Portfolio Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-light mb-0">Portfolio</h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+
+          <div class="divider-custom-icon">
+           
+          </div>
+
+        </div>
+
+        <!-- Portfolio Grid Items -->
+        <div class="row">
+          <div class="col-lg-10 col-md-12 mx-auto">
+            
+            <div class="card-deck" id="port">
+              <div class="card card-lg p-5 text-center bg-first text-light border-0" data-toggle="modal" data-target="#portfolioModal1">
+                <div class="card-body">
+                  <h1 class="display-1"><i class="fas fa-boxes"></i></h1>
+                  <p>INVENTORY SYSTEM</p>
+                </div>
+              </div>
+              <div class="card card-lg p-5 text-center bg-first text-light border-0" data-toggle="modal" data-target="#portfolioModal2">
+                <div class="card-body">
+                  <h1 class="display-1"><i class="fas fa-clinic-medical"></i></h1>
+                  <p>MEDICAL DIAGNOSIS CHATBOT</p>
+                </div>
+              </div>
+              <div class="card card-lg p-5 text-center bg-first border-0 text-light" data-toggle="modal" data-target="#portfolioModal3">
+                <div class="card-body">
+                  <h1 class="display-1"><i class="fas fa-mobile-alt"></i></h1>
+                  <p>STUDENT MONITORING APP</p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        
+
+        </div>
+        <div class="row">
+          <div class="col-lg-10 col-md-12 mx-auto">
+            <div class="card-deck" id="port">
+              <div class="card card-lg p-5 text-center bg-first text-light border-0" data-toggle="modal" data-target="#portfolioModal4">
+                <div class="card-body">
+                  <h1 class="display-1"><i class="fas fa-tv"></i></h1>
+                  <p>ANIME SITE</p>
+                </div>
+              </div>
+              <div class="card card-lg p-5 text-center bg-first text-light border-0" data-toggle="modal" data-target="#portfolioModal5">
+                <div class="card-body">
+                  <h1 class="display-1"><i class="fas fa-film"></i></h1>
+                  <p>Movie Site</p>
+                </div>
+              </div>
+             <!--  <div class="card card-lg p-5 text-center bg-first border-0 text-light" data-toggle="modal" data-target="#portfolioModal3">
+                <div class="card-body">
+                  <h1 class="display-1"><i class="fas fa-mobile-alt"></i></h1>
+                  <p>STUDENT MONITORING APP</p>
+                </div>
+              </div> -->
+              
+            </div>
+
+          </div>
+        
+
+        </div>
+        <!-- /.row -->
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="page-section text-white mb-0" id="about">
+      <div class="container" style="opacity: 0;">
+
+        <!-- About Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-light">
+         
+        </div>
+
+        <!-- About Section Content -->
+        <div class="row">
+          <div class="col-lg-8 mx-auto">
+            <p class="lead text-center">
+              JKG creatives is a community of designers and web developers that provides services to any type of business. JKG aims to achieve customers expectations and surpass satisfaction. Excellence is the paramount goal of JKG creatives.
+            </p>
+          </div>
+        </div>
+
+       
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="page-section" id="contact">
+      <div class="container" style="opacity: 0;">
+
+        <!-- Contact Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-light mb-0">Contact Us</h2>
+
+        <!-- Icon Divider -->
+       <div class="divider-custom divider-light">
+          
+        </div>
+
+        <!-- Contact Section Form -->
+        <table class="table bg-transparent text-light" id="contactTable">
+          <tr>
+            <td width="10%" class="text-right"><i class="fas fa-phone"></i></td>
+            <td width="3%" class="text-right">Phone:</td>
+            <td class="text-left"><strong>665-3472</strong></td>
+          </tr>
+          <tr>
+            <td class="text-right"><i class="fas fa-mobile"></i></td>
+            <td class="text-right">Mobile:</td>
+            <td class="text-left"><strong>0948 5785 905</strong></td>
+          </tr>
+          <tr>
+            <td class="text-right"><i class="fas fa-envelope"></i></td>
+            <td class="text-right">Email:</td>
+            <td class="text-left"><strong>JKG.creatives@gmail.com</strong></td>
+          </tr>
+          <tr>
+            <td class="text-right"><i class="fas fa-map-marker-alt"></i></td>
+            <td class="text-right">Address:</td>
+            <td class="text-left"><strong>block 3 olive alley East Quirino Hill Baguio City</strong></td>
+          </tr>
+        </table>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+
+
+  <!-- Copyright Section -->
+  <section class="copyright py-4 text-center text-white">
+    <div class="container">
+      <small>Copyright &copy; JKG Creatives 2019</small>
+    </div>
+  </section>
+
+  <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+  <div class="scroll-to-top d-lg-none position-fixed ">
+    <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+  </div>
+
+  <!-- Portfolio Modals -->
+
+  <!-- Portfolio Modal 1 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><a href="https://isys-JKG.000webhostapp.com/index.php" class="text-dark" target="_blank">Inventory System</a></h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                 
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <a href="https://isys-JKG.000webhostapp.com/index.php" class="text-dark" target="_blank"><img class="img-fluid rounded mb-5" src="img/isys.png" alt="" ></a>
+                <!-- Portfolio Modal - Text -->
+                <p>Link : <a href="https://isys-JKG.000webhostapp.com/index.php" target="_blank">https://isys-JKG.000webhostapp.com/index.php</a></p>
+                <p class="mb-5">A web application for businesses that can be used for tracking inventory levels, orders, sales and deliveries.</p>
+                <button class="btn bg-first text-light" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 2 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-5"><a href="https://airmed.000webhostapp.com/" class="text-dark" target="_blank">Airmed</a></h2>
+                <!-- Portfolio Modal - Image -->
+                <a href="https://airmed.000webhostapp.com/" target="_blank"><img class="img-fluid rounded mb-5" src="img/airmed.png" alt=""></a>
+                <!-- Portfolio Modal - Text -->
+                <p>Link : <a href="https://airmed.000webhostapp.com/" target="_blank">https://airmed.000webhostapp.com/</a></p>
+                <p class="mb-5">Airmed is a web based chatbot that suggests the possible diseases that the users may have based on their symptom(s).</p>
+                <button class="btn bg-first text-light" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 3 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-5"><a href="https://play.google.com/store/apps/details?id=com.uc.bcf.edu.ph" class="text-dark" target="_blank">UCordilleras</a></h2>
+                <!-- Portfolio Modal - Image -->
+                <a href="https://play.google.com/store/apps/details?id=com.uc.bcf.edu.ph" target="_blank"><img class="img-fluid rounded mb-5" src="img/ucor.png" alt=""></a>
+                <!-- Portfolio Modal - Text -->
+                <p>Link : <a href="https://play.google.com/store/apps/details?id=com.uc.bcf.edu.ph" target="_blank">https://play.google.com/store/apps/details?id=com.uc.bcf.edu.ph</a></p>
+                <p class="mb-5">UCordilleras is the official mobile app of the University of the Cordilleras for viewing basic Senior High School student profile, class schedule, attendance, grades, student accounts and payments.</p>
+                <button class="btn bg-first text-light" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 4 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-5"><a href="https://nikkosaldoofo-ob.github.io/Mangaka" class="text-dark" target="_blank">Mangaka</a></h2>
+                <!-- Portfolio Modal - Image -->
+                <a href="https://nikkosaldoofo-ob.github.io/Mangaka" target="_blank"><img class="img-fluid rounded mb-5" src="img/mangaka.png" alt=""></a>
+                <!-- Portfolio Modal - Text -->
+                <p>Link : <a href="https://nikkosaldoofo-ob.github.io/Mangaka" target="_blank">https://nikkosaldoofo-ob.github.io/Mangaka</a></p>
+                <p class="mb-5"></p>
+                <button class="btn bg-first text-light" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Portfolio Modal 5 -->
+ <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-5"><a href="https://nikkosaldoofo-ob.github.io/5BestWebsiteOf2015/" class="text-dark" target="_blank">5 Best Selling Movies Of 2015</a></h2>
+                <!-- Portfolio Modal - Image -->
+                <a href="https://nikkosaldoofo-ob.github.io/5BestWebsiteOf2015/" target="_blank"><img class="img-fluid rounded mb-5" src="img/5best.png" alt=""></a>
+                <!-- Portfolio Modal - Text -->
+                <p>Link : <a href="https://nikkosaldoofo-ob.github.io/5BestWebsiteOf2015/" target="_blank">https://nikkosaldoofo-ob.github.io/5BestWebsiteOf2015/</a></p>
+                <p class="mb-5"></p>
+                <button class="btn bg-first text-light" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Portfolio Modal 6 -->
+  <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title -->
+                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
+                <!-- Icon Divider -->
+                <div class="divider-custom">
+                  <div class="divider-custom-line"></div>
+                  <div class="divider-custom-icon">
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Modal - Image -->
+                <img class="img-fluid rounded mb-5" src="img/portfolio/submarine.png" alt="">
+                <!-- Portfolio Modal - Text -->
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                <button class="btn btn-primary" href="#" data-dismiss="modal">
+                  <i class="fas fa-times fa-fw"></i>
+                  Close Window
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/jquery.visible.min.js"></script>
+
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+
+  <!-- Custom scripts for this template -->
+  <script src="js/freelancer.min.js"></script>
+  <!-- <script type="text/javascript" src="js/particles.min.js"></script> -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      
+      // $('#scrollDown').on('click',function() {
+      //   $('a[href="#portfolio"]').trigger('click');
+      // });
+
+      $('#port .card').on('mouseover', function() {
+        $(this).find('h1, p').addClass('hoveredCard');
+      });
+      $('#port .card').on('mouseout', function() {
+         $(this).find('h1, p').removeClass('hoveredCard'); 
+      });
+
+      function nav() {
+        var scroll =  $(window).scrollTop();
+
+        if (scroll > 0) {
+          $('#mainNav').removeClass('bg-transparent').addClass('bg-dark');
+          $('#navLogo').show(500);
+        }
+        else {
+          $('#mainNav').removeClass('bg-dark').addClass('bg-transparent');
+          $('#navLogo').hide(500);
+        }
+
+
+        if ( $('#portfolio').visible(true) ) {
+          $('#portfolio .container').animate({opacity: 1}, 1000)
+        }
+        if ( $('#about').visible(true) ) {
+          $('#about .container').animate({opacity: 1}, 1000)
+        }
+        if ( $('#contact').visible(true) ) {
+          $('#contact .container').animate({opacity: 1}, 1000)
+        }
+      }
+      $(document).scroll(nav);
+
+      $('.active').removeClass('active');
+      $(document).scrollTop(0);
+  });
+
+  </script>
+
+</body>
+
+</html>
